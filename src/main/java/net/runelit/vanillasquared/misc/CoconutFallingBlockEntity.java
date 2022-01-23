@@ -2,9 +2,12 @@ package net.runelit.vanillasquared.misc;
 
 import com.google.common.collect.Lists;
 import net.minecraft.advancement.AdvancementManager;
+import net.minecraft.advancement.PlayerAdvancementTracker;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.ServerAdvancementLoader;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.util.Identifier;
 import net.runelit.vanillasquared.BlockInit;
 import net.runelit.vanillasquared.ModDamageSource;
 import net.runelit.vanillasquared.ModSoundEvents;
@@ -21,6 +24,7 @@ import net.minecraft.world.World;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
 
 public class CoconutFallingBlockEntity extends FallingBlockEntity {
 
@@ -49,11 +53,15 @@ public class CoconutFallingBlockEntity extends FallingBlockEntity {
                 Iterator var7 = list.iterator();
 
                 while(var7.hasNext()) {
+                    ServerAdvancementLoader serverAdvancementLoader = getServer().getAdvancementLoader();
                     Entity entity = (Entity)var7.next();
-                    world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ModSoundEvents.COCONUT_DAMAGE, SoundCategory.NEUTRAL, 0.5F, 1.0F);
+                    if (Math.random() < 0.1) {
+                        world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ModSoundEvents.COCONUT_DAMAGE, SoundCategory.NEUTRAL, 0.5F, 1.0F);
+
+                    }
                     entity.damage(ModDamageSource.COCONUT_FALL, 4);
                     if (entity instanceof ServerPlayerEntity) {
-                        ((ServerPlayerEntity) entity).getAdvancementTracker().grantCriterion(, "get_bonked");
+                    ((ServerPlayerEntity) entity).getAdvancementTracker().grantCriterion(serverAdvancementLoader.get(new Identifier("vanillasquared", "bonk")), "get_bonked");
                     }
                 }
             }
