@@ -8,5 +8,10 @@
     "sounds": [
       "vanillasquared:music/music_disc_float"
     ]
+  },
+  "bonc": {
+    "sounds": [
+      "vanillasquared:bonc"
+    ]
   }
 }

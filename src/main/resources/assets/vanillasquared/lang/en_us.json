@@ -16,6 +16,9 @@
   "item.vanillasquared.stridewalker_boots.tooltip": "+50% Fire Damage Reduction",
 
   "block.vanillasquared.coconut": "Coconut",
-  "block.vanillasquared.barrel_cactus": "Barrel Cactus"
+  "block.vanillasquared.barrel_cactus": "Barrel Cactus",
+  "block.vanillasquared.desert_palm_leaves": "Desert Palm Leaves",
+
+  "death.attack.coconut_fall": "%1$s was conked by a coconut."
 
 }

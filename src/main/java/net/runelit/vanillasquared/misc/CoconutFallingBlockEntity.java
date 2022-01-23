@@ -1,6 +1,10 @@
 package net.runelit.vanillasquared.misc;
 
 import com.google.common.collect.Lists;
+import net.minecraft.advancement.AdvancementManager;
+import net.minecraft.advancement.criterion.Criteria;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.runelit.vanillasquared.BlockInit;
 import net.runelit.vanillasquared.ModDamageSource;
 import net.runelit.vanillasquared.ModSoundEvents;
@@ -36,27 +40,20 @@ public class CoconutFallingBlockEntity extends FallingBlockEntity {
     @Override
     public boolean handleFallDamage(float fallDistance, float damageMultiplier) {
 
+        System.out.println("yas");
             int i = MathHelper.ceil(fallDistance - 1.0F);
             if (i > 0) {
                 List<Entity> list = Lists.newArrayList(this.world.getOtherEntities(this, this.getBoundingBox()));
-                boolean bl = this.block.isIn(BlockTags.ANVIL);
-                DamageSource damageSource = ModDamageSource.COCONUT_FALL;
+
+
                 Iterator var7 = list.iterator();
 
                 while(var7.hasNext()) {
                     Entity entity = (Entity)var7.next();
-                    if (this.block.isOf(BlockInit.COCONUT) && Math.random() > 0.25) {
-                        world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ModSoundEvents.COCONUT_DAMAGE, SoundCategory.NEUTRAL, 1.0F, 1.0F);
-                    }
-                    entity.damage(damageSource, (float)Math.min(MathHelper.floor((float)i * this.fallHurtAmount), this.fallHurtMax));
-                }
-
-                if (bl && (double)this.random.nextFloat() < 0.05000000074505806D + (double)i * 0.05D) {
-                    BlockState blockState = AnvilBlock.getLandingState(this.block);
-                    if (blockState == null) {
-                        this.destroyedOnLanding = true;
-                    } else {
-                        this.block = blockState;
+                    world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ModSoundEvents.COCONUT_DAMAGE, SoundCategory.NEUTRAL, 0.5F, 1.0F);
+                    entity.damage(ModDamageSource.COCONUT_FALL, 4);
+                    if (entity instanceof ServerPlayerEntity) {
+                        ((ServerPlayerEntity) entity).getAdvancementTracker().grantCriterion(, "get_bonked");
                     }
                 }
             }

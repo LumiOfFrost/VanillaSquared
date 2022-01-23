@@ -14,8 +14,10 @@ public class ModSoundEvents implements ModInitializer {
     public static final Identifier ID_COCONUT_DAMAGE = new Identifier("vanillasquared:bonc");
     public static SoundEvent COCONUT_DAMAGE = new SoundEvent(ID_COCONUT_DAMAGE);
 
+
     @Override
     public void onInitialize() {
+
         Registry.register(Registry.SOUND_EVENT, ModSoundEvents.ID_MUSIC_DISC_DOG, MUSIC_DISC_DOG);
         Registry.register(Registry.SOUND_EVENT, ModSoundEvents.ID_MUSIC_DISC_FLOAT, MUSIC_DISC_FLOAT);
         Registry.register(Registry.SOUND_EVENT, ModSoundEvents.ID_COCONUT_DAMAGE, COCONUT_DAMAGE);

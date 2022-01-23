@@ -6,7 +6,8 @@
 		"4": "vanillasquared:block/barrel_cactus_top",
 		"5": "vanillasquared:block/barrel_cactus_flower",
 		"6": "vanillasquared:block/barrel_cactus_side",
-		"7": "vanillasquared:block/barrel_cactus_bottom"
+		"7": "vanillasquared:block/barrel_cactus_bottom",
+		"particle": "vanillasquared:block/barrel_cactus_top"
 	},
 	"elements": [
 		{
