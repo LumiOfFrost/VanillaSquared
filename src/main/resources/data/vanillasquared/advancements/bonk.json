@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "vanillasquared:coconut"
+    },
+    "title": "Bonk!",
+    "description": "Get conked by a coconut.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:adventure/adventuring_time",
+  "criteria": {
+    "get_bonked": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
