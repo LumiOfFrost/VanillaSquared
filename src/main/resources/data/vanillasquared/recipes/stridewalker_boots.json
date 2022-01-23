@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "H H",
+    "H H",
+    "O O"
+  ],
+  "key": {
+    "H": {
+      "item": "vanillasquared:strider_hide"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "item": "vanillasquared:stridewalker_boots",
+    "count": 1
+  }
+}

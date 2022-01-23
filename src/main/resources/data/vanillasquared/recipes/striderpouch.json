@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "HSH",
+    "H H",
+    " H "
+  ],
+  "key": {
+    "H": {
+      "item": "vanillasquared:strider_hide"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "vanillasquared:lava_pouch",
+    "count": 1
+  }
+}

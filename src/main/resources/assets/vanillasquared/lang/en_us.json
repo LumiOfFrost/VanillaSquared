@@ -1,0 +1,21 @@
+{
+
+  "item.vanillasquared.strider_hide": "Strider Hide",
+
+  "item.vanillasquared.lava_pouch": "Lava Pouch",
+  "item.vanillasquared.lava_pouch_filled": "Lava Pouch",
+  "item.vanillasquared.music_disc_dog": "Music Disc",
+  "item.vanillasquared.music_disc_dog.desc": "C418 - Dog",
+  "item.vanillasquared.music_disc_float": "Music Disc",
+  "item.vanillasquared.music_disc_float.desc": "Runelit - Float",
+
+  "item.vanillasquared.barrel_cactus":  "Barrel Cactus",
+  "item.vanillasquared.coconut": "Coconut",
+
+  "item.vanillasquared.stridewalker_boots": "Stridewalker Boots",
+  "item.vanillasquared.stridewalker_boots.tooltip": "+50% Fire Damage Reduction",
+
+  "block.vanillasquared.coconut": "Coconut",
+  "block.vanillasquared.barrel_cactus": "Barrel Cactus"
+
+}

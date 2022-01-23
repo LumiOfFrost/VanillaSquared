@@ -1,0 +1,12 @@
+{
+  "music.music_disc_dog": {
+    "sounds": [
+      "vanillasquared:music/music_disc_dog"
+    ]
+  },
+  "music.music_disc_float": {
+    "sounds": [
+      "vanillasquared:music/music_disc_float"
+    ]
+  }
+}

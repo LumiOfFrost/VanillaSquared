@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "vanillasquared",
+  "version": "1.0",
+
+  "name": "Vanilla Squared",
+  "description": "A mod dedicated to making the game better without changing the vanilla feel.",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/vanillasquared/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.runelit.vanillasquared.ItemInit",
+      "net.runelit.vanillasquared.ModSoundEvents",
+      "net.runelit.vanillasquared.BlockInit"
+    ],
+    "client": [
+      "net.runelit.vanillasquared.ClientInit"
+    ]
+  },
+  "mixins": [
+    "vanillasquared.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

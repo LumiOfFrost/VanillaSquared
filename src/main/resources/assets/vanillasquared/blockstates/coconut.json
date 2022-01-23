@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "vanillasquared:block/coconut_hanging"
+    },
+    "hanging=true": {
+      "model": "vanillasquared:block/coconut_floor"
+    }
+  }
+}
