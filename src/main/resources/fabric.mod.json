@@ -21,7 +21,8 @@
     "main": [
       "net.runelit.vanillasquared.ItemInit",
       "net.runelit.vanillasquared.ModSoundEvents",
-      "net.runelit.vanillasquared.BlockInit"
+      "net.runelit.vanillasquared.BlockInit",
+      "net.runelit.vanillasquared.WorldInit"
     ],
     "client": [
       "net.runelit.vanillasquared.ClientInit"

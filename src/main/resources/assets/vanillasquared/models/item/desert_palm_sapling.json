@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "vanillasquared:block/desert_palm_sapling"
+  }
+}

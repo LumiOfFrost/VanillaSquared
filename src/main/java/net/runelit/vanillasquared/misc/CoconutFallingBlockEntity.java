@@ -8,6 +8,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.ServerAdvancementLoader;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.feature.Feature;
 import net.runelit.vanillasquared.BlockInit;
 import net.runelit.vanillasquared.ModDamageSource;
 import net.runelit.vanillasquared.ModSoundEvents;
@@ -21,6 +22,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+import net.runelit.vanillasquared.world.features.DesertPalm;
 
 import java.util.Iterator;
 import java.util.List;
@@ -48,7 +50,6 @@ public class CoconutFallingBlockEntity extends FallingBlockEntity {
             int i = MathHelper.ceil(fallDistance - 1.0F);
             if (i > 0) {
                 List<Entity> list = Lists.newArrayList(this.world.getOtherEntities(this, this.getBoundingBox()));
-
 
                 Iterator var7 = list.iterator();
 

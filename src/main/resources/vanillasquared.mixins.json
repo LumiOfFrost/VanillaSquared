@@ -4,6 +4,7 @@
   "package": "net.runelit.vanillasquared.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "DefaultBiomeFeaturesMixin",
     "FireResistantBoots"
   ],
   "client": [

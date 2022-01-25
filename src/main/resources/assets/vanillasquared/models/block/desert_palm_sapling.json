@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "vanillasquared:block/desert_palm_sapling"
+  }
+}
